@@ -1,0 +1,17 @@
+{{ partial "head" . }}
+  h1 base
+  main 
+    {{ range sort .Paginator.Pages }}
+    article 
+      h2 class="subtitle is-6" {{ .Date.Format "January 2, 2006" }}
+      h1 class="title" 
+        a href="{{ .Permalink }}" {{ .Title }} {{ if .Draft }} ::Draft{{ end }}
+      div class="content" 
+        {{ .Summary | plainify | safeHTML }}
+        {{ if .Truncated }}
+        a class="button is-link" href="{{ .Permalink }}" style="height:28px" 
+          Read more
+          span class="icon is-small" 
+            i class="fa fa-angle-double-right" 
+        {{ end }}
+    {{ end }}

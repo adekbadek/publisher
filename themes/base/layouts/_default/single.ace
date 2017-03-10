@@ -1,0 +1,4 @@
+{{ partial "head" . }}
+article 
+  h1 {{ .Title }}
+  div {{ .Content }}
