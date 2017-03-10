@@ -1,5 +1,5 @@
 {
-  "name": "hugo-base",
+  "name": "publisher",
   "version": "1.0.0",
   "scripts": {
     "dev": "concurrently --prefix \"{name}\" --names \"HUGO,GULP\" -c \"bgBlue,bgGreen\" \"hugo server --theme=base\" \"(cd themes/base && gulp watch)\"",
