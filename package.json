@@ -2,9 +2,11 @@
   "name": "hugo-base",
   "version": "1.0.0",
   "scripts": {
-    "dev": "concurrently --prefix \"{name}\" --names \"HUGO,GULP\" -c \"bgBlue,bgGreen\" \"hugo server --theme=base\" \"(cd themes/base && gulp watch)\""
+    "dev": "concurrently --prefix \"{name}\" --names \"HUGO,GULP\" -c \"bgBlue,bgGreen\" \"hugo server --theme=base\" \"(cd themes/base && gulp watch)\"",
+    "medium": "markdown-to-medium"
   },
   "devDependencies": {
-    "concurrently": "^3.4.0"
+    "concurrently": "^3.4.0",
+    "markdown-to-medium": "^1.1.0"
   }
 }
